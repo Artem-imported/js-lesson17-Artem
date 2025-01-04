@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript маніпуляції</title>
+</head>
+<body>
+    <!-- Кнопка та текстове поле -->
+    <div>
+        <input type="text" id="textField" placeholder="Введіть текст">
+        <button id="button">Натисни</button>
+    </div>
+
+    <script>
+        const button = document.getElementById('button');
+        const textField = document.getElementById('textField');
+        button.addEventListener('click', () => {
+            button.textContent = textField.value;
+        });
+    </script>
+
+    <hr>
+
+    <!-- Заголовок та зображення -->
+    <div>
+        <h2 id="header">Це заголовок</h2>
+        <img id="image" src="path/to/original-image.jpg" alt="Оригінальне зображення" width="200">
+    </div>
+
+    <script>
+        const image = document.getElementById('image');
+        image.src = 'path/to/new-image.jpg';
+    </script>
+
+    <hr>
+
+    <!-- Посилання та зображення -->
+    <div>
+        <a id="link" href="https://example.com">
+            <img id="linkedImage" src="path/to/image.jpg" width="200">
+        </a>
+    </div>
+
+    <script>
+        const link = document.getElementById('link');
+        const linkedImage = document.getElementById('linkedImage');
+        link.href = 'https://new-url.com';
+        linkedImage.alt = 'Опис нового зображення';
+    </script>
+
+    <hr>
+
+    <!-- Список -->
+    <ul id="list">
+        <li>Елемент 1</li>
+        <li>Елемент 2</li>
+        <li>Елемент 3</li>
+    </ul>
+
+    <script>
+        const firstListItem = document.querySelector('#list li');
+        firstListItem.textContent = 'Новий текст';
+    </script>
+</body>
+</html>
